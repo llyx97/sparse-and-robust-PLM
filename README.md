@@ -40,7 +40,12 @@ The debiasing methods requires bias models' predictions, which are placed in the
 ## Subnetworks from Fine-tuned BERT
 
 ### Subnetworks from Standard Fine-tuned BERT
+#### IMP
+#### Mask Training
+
 ### Subnetworks from Debiasing Fine-tuned BERT
+#### IMP
+#### Mask Training
 
 
 ## BERT Subnetworks Fine-tuned in Isolation
