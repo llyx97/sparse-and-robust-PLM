@@ -23,8 +23,12 @@ By specifying the argument `--model_name_or_path` as `bert-base-uncased`, `bert-
 
 
 ## Fine-tuning Full BERT
+
 ### Fine-tuning with Standard Cross-Entropy Loss
 To fine-tune full BERT with standard cross-entropy loss, use the scripts in `scripts/full_bert/std_train`. Taking MNLI as an example, run
 ```
   bash scripts/full_bert/std_train/mnli.sh
 ```
+
+### Fine-tuning with Debiasing Loss
+
