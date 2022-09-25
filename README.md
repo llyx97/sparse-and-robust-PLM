@@ -44,9 +44,21 @@ The debiasing methods requires bias models' predictions, which are placed in the
 
 
 ## BERT Subnetworks Fine-tuned in Isolation
+### IMP
+### Mask Training
+
 
 ## BERT Subnetworks Without Fine-tuning
+### Standard Cross-Entropy as Training Objective
+### PoE as Training Objective
+
 
 ## Sparse and Unbiased BERT Subnetworks
+### Subnetworks from Fine-tuned BERT
+### BERT Subnetworks Fine-tuned in Isolation
+### BERT Subnetworks Without Fine-tuning
+
 
 ## Refining the SRNets Searching Process
+### The Timing to Start Searching SRNets
+### Gradual Sparsity Increase
