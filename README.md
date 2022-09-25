@@ -13,7 +13,7 @@ We call such subnetworks SRNets and explore their existence under different prun
 ## Requirements
 Python3 <br />
 torch>1.4.0 <br />
-jsonlines <br />
+install dependencies via `pip install -r requirements.txt`.
 
 
 ## Prepare Data and Pre-trained Language Models
