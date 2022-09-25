@@ -35,3 +35,18 @@ The debiasing methods requires bias models' predictions, which are placed in the
 ```
   bash scripts/full_bert/robust_train/poe/mnli.sh
 ```
+
+
+## Subnetworks from Fine-tuned BERT
+
+### Subnetworks from Standard Fine-tuned BERT
+### Subnetworks from Debiasing Fine-tuned BERT
+
+
+## BERT Subnetworks Fine-tuned in Isolation
+
+## BERT Subnetworks Without Fine-tuning
+
+## Sparse and Unbiased BERT Subnetworks
+
+## Refining the SRNets Searching Process
