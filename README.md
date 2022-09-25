@@ -16,6 +16,6 @@ torch>1.4.0 <br />
 
 
 ## Prepare Data and Pre-trained Language Models
-Download the [GLUE](https://gluebenchmark.com/) datasets to `imp_and_fine_tune/glue` and the [SQuAD](https://rajpurkar.github.io/SQuAD-explorer/) v1.1 dataset to `mask_training/data/squad`.
+MNLI and QQP can be downloaded from [GLUE](https://gluebenchmark.com/). Download HANS (OOD dataset of MNLI) from [here](https://github.com/tommccoy1/hans).
 
 `bert-base-uncased`, `bert-large-uncased` and `roberta-base` can be downloaded from [huggingface models](https://huggingface.co/models).
