@@ -1,0 +1,8 @@
+dataclasses
+requests
+filelock
+tqdm
+jsonlines
+packaging
+sklearn
+transformers==2.10.0
