@@ -4,3 +4,5 @@ This repository contains implementation of the [paper](https://arxiv.org/abs/220
 
 ## Overview
 The main topic of this paper is to investigate **whether there exist PLM subnetworks that are both sparse and robust against dataset bias?**
+
+We call such subnetworks SRNets and explore their existence under different pruning and fine-tuning paradigms, which are illustrated in Figure 1.
