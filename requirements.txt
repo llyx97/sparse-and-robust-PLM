@@ -3,5 +3,4 @@ requests
 filelock
 tqdm
 jsonlines
-tokenizers
-sacremoses
+transformers==
