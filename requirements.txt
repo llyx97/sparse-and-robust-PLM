@@ -3,4 +3,4 @@ requests
 filelock
 tqdm
 jsonlines
-transformers==
+transformers==2.10.0
