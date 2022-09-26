@@ -24,7 +24,7 @@ By specifying the argument `--model_name_or_path` as `bert-base-uncased`, `bert-
 
 ## Fine-tuning Full BERT
 
-### Fine-tuning with Standard Cross-Entropy Loss
+### Fine-tuning with Standard Cross-Entropy (CE) Loss
 To fine-tune full BERT with standard cross-entropy loss, use the scripts in `scripts/full_bert/std_train`. Taking MNLI as an example, run
 ```
   bash scripts/full_bert/std_train/mnli.sh
@@ -41,9 +41,19 @@ The debiasing methods requires bias models' predictions, which are placed in the
 
 ### Subnetworks from Standard Fine-tuned BERT
 #### IMP
+To perform IMP using the CE loss on a standard fine-tuned BERT (again, taking MNLI as example), run
+```
+  bash scripts/imp/prune_after_ft/std/mnli.sh
+```
+
+Similarly, when PoE is used in the process of IMP, run
+```
+  bash scripts/imp/prune_after_ft/poe/mnli.sh
+```
+
 #### Mask Training
 
-### Subnetworks from Debiasing Fine-tuned BERT
+### Subnetworks from PoE Fine-tuned BERT
 #### IMP
 #### Mask Training
 
