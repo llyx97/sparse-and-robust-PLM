@@ -35,7 +35,7 @@ The debiasing methods requires bias models' predictions, which are placed in the
 ```
   bash scripts/full_bert/robust_train/poe/mnli.sh
 ```
-Changing `poe` to `reweighting` or `conf_reg` to switch to *Example Reweighting* or *Confidence Regularization*. To perform `conf_reg`, we need to first obtain the predictions of the CE fine-tuned BERT by running
+Changing `poe` to `reweighting` or `conf_reg` to switch to *Example Reweighting* or *Confidence Regularization*. To perform `conf_reg`, we need to first obtain the predictions of the CE fine-tuned BERT (the teacher model) by running
 ```
   bash scripts/full_bert/pred_probs/mnli.sh
 ```
@@ -108,9 +108,17 @@ To enable mask training with PoE, change the shell script to `scripts/mask_train
 
 ## Sparse and Unbiased BERT Subnetworks
 ### Subnetworks from Fine-tuned BERT
+```
+  bash scripts/mask_train/mask_on_plm_ft/plm_std_ft/ood/mnli/0.5.sh
+```
 ### BERT Subnetworks Fine-tuned in Isolation
+```
+  bash scripts/mask_train/mask_on_plm_ft/plm_std_ft/ood/mnli/retrain/0.5.sh
+```
 ### BERT Subnetworks Without Fine-tuning
-
+```
+  bash scripts/mask_train/mask_on_plm_pt/ood/mnli/0.5.sh
+```
 
 ## Refining the SRNets Searching Process
 ### The Timing to Start Searching SRNets
