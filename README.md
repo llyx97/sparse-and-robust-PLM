@@ -51,7 +51,7 @@ Similarly, when PoE is used in the process of IMP, run
   bash scripts/imp/prune_after_ft/poe/mnli.sh
 ```
 
-#### <span id="mask_train1"> *Mask Training* </span>
+#### <span id="mask_train1"> Mask Training </span>
 To perform mask training using the CE loss, with a target sparsity of 50%, run
 ```
   bash scripts/mask_train/mask_on_plm_ft/plm_std_ft/std/mnli/0.5.sh
@@ -87,7 +87,7 @@ This will produce subnetworks with varying sparsity levels (10%~90%). Then, fine
 Change the shell script to `scripts/imp/lt/retrain/poe/mnli/0.5.sh` to enable PoE fine-tuning.
 
 ### Mask Training
-We use the [Subnetworks from Standard Fine-tuned BERT](#mask_train1) (i.e., pruning mask). Then, fine-tune the obtained subnetwork by running:
+We use the pruning masks of the [Subnetworks from Standard Fine-tuned BERT](#mask_train1). Then, fine-tune the obtained subnetwork by running:
 ```
   bash scripts/mask_train/mask_on_plm_ft/plm_std_ft/poe/mnli/retrain/std/0.5.sh
 ```
