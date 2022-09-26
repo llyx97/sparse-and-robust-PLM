@@ -86,7 +86,14 @@ This will produce subnetworks with varying sparsity levels (10%~90%). Then, fine
 ```
 
 ### Mask Training
-
+To obtain subnetworks at 50% sparsity using mask training (PoE as objective), run
+```
+  bash scripts/mask_train/mask_on_plm_pt/poe/mnli/0.5.sh
+```
+Then, fine-tune the obtained subnetwork by running:
+```
+  bash scripts/mask_train/mask_on_plm_pt/poe/mnli/retrain/0.5.sh
+```
 
 ## BERT Subnetworks Without Fine-tuning
 ### Standard Cross-Entropy as Training Objective
