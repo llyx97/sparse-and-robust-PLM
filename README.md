@@ -35,7 +35,10 @@ The debiasing methods requires bias models' predictions, which are placed in the
 ```
   bash scripts/full_bert/robust_train/poe/mnli.sh
 ```
-Changing `poe` to 'reweighting' or `conf_reg` to switch to *Example Reweighting* or *Confidence Regularization*.
+Changing `poe` to `reweighting` or `conf_reg` to switch to *Example Reweighting* or *Confidence Regularization*. To perform `conf_reg`, we need to first obtain the predictions of the CE fine-tuned BERT by running
+```
+  bash scripts/full_bert/pred_probs/mnli.sh
+```
 
 
 ## Subnetworks from Fine-tuned BERT
