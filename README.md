@@ -76,6 +76,15 @@ To perform mask training using the PoE loss, with a target sparsity of 50%, run
 
 ## BERT Subnetworks Fine-tuned in Isolation
 ### IMP
+To obtain the subnetworks using IMP, run
+```
+  bash scripts/imp/lt/pruning/mnli.sh
+```
+This will produce subnetworks with varying sparsity levels (10%~90%). Then, fine-tune the obtained subnetwork (taking 50% sparsity as an example) by running:
+```
+  bash scripts/imp/lt/retrain/mnli/0.5.sh
+```
+
 ### Mask Training
 
 
