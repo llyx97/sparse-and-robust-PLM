@@ -107,15 +107,17 @@ To enable mask training with PoE, change the shell script to `scripts/mask_train
 
 
 ## Sparse and Unbiased BERT Subnetworks
-### Subnetworks from Fine-tuned BERT
+We utilize the OOD training data to explore the upper bound of SRNets. The above three setups are considered and we give examples as follows
+
+Subnetworks from Fine-tuned BERT:
 ```
   bash scripts/mask_train/mask_on_plm_ft/plm_std_ft/ood/mnli/0.5.sh
 ```
-### BERT Subnetworks Fine-tuned in Isolation
+BERT Subnetworks Fine-tuned in Isolation:
 ```
   bash scripts/mask_train/mask_on_plm_ft/plm_std_ft/ood/mnli/retrain/0.5.sh
 ```
-### BERT Subnetworks Without Fine-tuning
+BERT Subnetworks Without Fine-tuning:
 ```
   bash scripts/mask_train/mask_on_plm_pt/ood/mnli/0.5.sh
 ```
