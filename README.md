@@ -82,8 +82,9 @@ To obtain the subnetworks using IMP, run
 ```
 This will produce subnetworks with varying sparsity levels (10%~90%). Then, fine-tune the obtained subnetwork (taking 50% sparsity as an example) by running:
 ```
-  bash scripts/imp/lt/retrain/mnli/0.5.sh
+  bash scripts/imp/lt/retrain/std/mnli/0.5.sh
 ```
+Change the shell script to `scripts/imp/lt/retrain/poe/mnli/0.5.sh` to enable PoE fine-tuning.
 
 ### Mask Training
 To obtain subnetworks at 50% sparsity using mask training (PoE as objective), run
@@ -92,8 +93,9 @@ To obtain subnetworks at 50% sparsity using mask training (PoE as objective), ru
 ```
 Then, fine-tune the obtained subnetwork by running:
 ```
-  bash scripts/mask_train/mask_on_plm_pt/poe/mnli/retrain/0.5.sh
+  bash scripts/mask_train/mask_on_plm_pt/poe/mnli/retrain/std/0.5.sh
 ```
+Change the shell script to `scripts/mask_train/mask_on_plm_pt/poe/mnli/retrain/poe/0.5.sh` to enable PoE fine-tuning.
 
 ## BERT Subnetworks Without Fine-tuning
 ### Standard Cross-Entropy as Training Objective
