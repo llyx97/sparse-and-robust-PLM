@@ -23,3 +23,57 @@ By specifying the argument `--model_name_or_path` as `bert-base-uncased`, `bert-
 
 
 ## Fine-tuning Full BERT
+
+### Fine-tuning with Standard Cross-Entropy (CE) Loss
+To fine-tune full BERT with standard cross-entropy loss, use the scripts in `scripts/full_bert/std_train`. Taking MNLI as an example, run
+```
+  bash scripts/full_bert/std_train/mnli.sh
+```
+
+### Fine-tuning with Debiasing Loss
+The debiasing methods requires bias models' predictions, which are placed in the folder `bias_model_preds`. To fine-tune full BERT with Product-of-Experts(PoE) on MNLI, run
+```
+  bash scripts/full_bert/robust_train/poe/mnli.sh
+```
+
+
+## Subnetworks from Fine-tuned BERT
+
+### Subnetworks from Standard Fine-tuned BERT
+#### IMP
+To perform IMP using the CE loss on a standard fine-tuned BERT (again, taking MNLI as example), run
+```
+  bash scripts/imp/prune_after_ft/std/mnli.sh
+```
+
+Similarly, when PoE is used in the process of IMP, run
+```
+  bash scripts/imp/prune_after_ft/poe/mnli.sh
+```
+
+#### Mask Training
+
+### Subnetworks from PoE Fine-tuned BERT
+#### IMP
+#### Mask Training
+
+
+## BERT Subnetworks Fine-tuned in Isolation
+### IMP
+### Mask Training
+
+
+## BERT Subnetworks Without Fine-tuning
+### Standard Cross-Entropy as Training Objective
+### PoE as Training Objective
+
+
+## Sparse and Unbiased BERT Subnetworks
+### Subnetworks from Fine-tuned BERT
+### BERT Subnetworks Fine-tuned in Isolation
+### BERT Subnetworks Without Fine-tuning
+
+
+## Refining the SRNets Searching Process
+### The Timing to Start Searching SRNets
+### Gradual Sparsity Increase
