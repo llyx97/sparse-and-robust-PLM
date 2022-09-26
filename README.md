@@ -93,9 +93,13 @@ We use the pruning masks of the [Subnetworks from Standard Fine-tuned BERT](#mas
 ```
 Change the shell script to `scripts/mask_train/mask_on_plm_ft/plm_std_ft/poe/mnli/retrain/poe/0.5.sh` to enable PoE fine-tuning.
 
+
 ## BERT Subnetworks Without Fine-tuning
-### Standard Cross-Entropy as Training Objective
-### PoE as Training Objective
+To obtain the subnetworks, directly performing mask training on the pre-trained BERT:
+```
+  bash scripts/mask_train/mask_on_plm_pt/std/mnli/0.5.sh
+```
+To enable mask training with PoE, change the shell script to `scripts/mask_train/mask_on_plm_pt/poe/mnli/0.5.sh`.
 
 
 ## Sparse and Unbiased BERT Subnetworks
