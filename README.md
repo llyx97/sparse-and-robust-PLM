@@ -52,7 +52,7 @@ Similarly, when PoE is used in the process of IMP, run
 ```
 
 #### Mask Training
-To perform mask training using CE loss, with a target sparsity of 50%, run
+To perform mask training using the CE loss, with a target sparsity of 50%, run
 ```
   bash scripts/mask_train/mask_on_plm_ft/plm_std_ft/std/mnli/0.5.sh
 ```
@@ -63,8 +63,16 @@ Similarly, to use the PoE loss, run
 
 ### Subnetworks from PoE Fine-tuned BERT
 #### IMP
-#### Mask Training
+To perform IMP using the PoE loss on a PoE fine-tuned BERT, run
+```
+  bash scripts/imp/prune_after_robust_ft/poe/mnli.sh
+```
 
+#### Mask Training
+To perform mask training using the PoE loss, with a target sparsity of 50%, run
+```
+  bash scripts/mask_train/mask_on_plm_ft/plm_poe_ft/poe/mnli/0.5.sh
+```
 
 ## BERT Subnetworks Fine-tuned in Isolation
 ### IMP
