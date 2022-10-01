@@ -10,10 +10,14 @@ We call such subnetworks **SRNets** and explore their existence under different 
 ![](./figures/prune-finetune-paradigms.jpg)
 
 
-## Requirements
-python3.6 <br />
-torch>1.4.0 <br />
-install dependencies via `pip install -r requirements.txt`.
+## Setup
+```
+  conda create -n srnet python=3.6
+  conda activate srnet
+  onda install pytorch==1.6.0 cudatoolkit=10.1 -c pytorch
+  pip install -r requirements.txt
+```
+pytorch>=1.4.0 <br /> are also okay.
 
 
 ## Prepare Data and Pre-trained Language Models
