@@ -83,6 +83,7 @@ To perform IMP using the CE loss on a standard fine-tuned BERT (again, taking MN
 ```
   bash scripts/imp/prune_after_ft/std/mnli.sh
 ```
+Note that IMP will produce subnetworks with varying sparsity levels (10%~90%). 
 
 Similarly, when PoE is used in the process of IMP, run
 ```
