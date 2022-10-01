@@ -166,3 +166,8 @@ To start mask training from a [standard full BERT](#std_full_ft) fine-tuned for 
 The sparsity of subnetworks are set to 70% by default.
 
 ### Gradual Sparsity Increase
+To perform mask training with gradual sparsity increase, run the following command:
+```
+  bash scripts/mask_train/mask_on_plm_ft/plm_std_ft/poe/mnli/gradual_sparsity_increase/0.9.sh
+```
+The initial and final sparsity levels can be set in the script, corresponding to the arguments `--init_sparsity` and `--zero_rate`, respectively.
