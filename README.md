@@ -21,7 +21,37 @@ pytorch>=1.4.0 are also okay. <br />
 
 
 ## Prepare Data and Pre-trained Language Models
-MNLI and QQP are datasets from the [GLUE](https://gluebenchmark.com/) benchmark. For FEVER, we use the processed [training](https://www.dropbox.com/s/v1a0depfg7jp90f/fever.train.jsonl) and [evaluation](https://www.dropbox.com/s/bdwf46sa2gcuf6j/fever.dev.jsonl) data provided by the authors of [FEVER-Symmetric](https://github.com/TalSchuster/FeverSymmetric). The OOD datasets can be accessed from: [HANS](https://github.com/tommccoy1/hans), [PAWS](https://github.com/google-research-datasets/paws) and [FEVER-Symmetric](https://github.com/TalSchuster/FeverSymmetric). Download the datasets and place them to the `data/` folder.
+MNLI and QQP are datasets from the [GLUE](https://gluebenchmark.com/) benchmark. For FEVER, we use the processed [training](https://www.dropbox.com/s/v1a0depfg7jp90f/fever.train.jsonl) and [evaluation](https://www.dropbox.com/s/bdwf46sa2gcuf6j/fever.dev.jsonl) data provided by the authors of [FEVER-Symmetric](https://github.com/TalSchuster/FeverSymmetric). The OOD datasets can be accessed from: [HANS](https://github.com/tommccoy1/hans), [PAWS](https://github.com/google-research-datasets/paws) and [FEVER-Symmetric](https://github.com/TalSchuster/FeverSymmetric). Download the datasets and place them to the `data/` folder, the structure of which is like follows:
+```
+data
+├── MNLI
+│   ├── train.tsv
+│   ├── dev_matched.tsv
+│   ├── dev_mismatched.tsv
+|   └── hans
+|       ├── heuristics_train_set.txt
+|       └── heuristics_evaluation_set.txt
+├── QQP
+│   ├── train.tsv
+│   ├── dev.tsv
+|   ├── paws_qqp
+|   |   ├── train.tsv
+|   |   ├── dev.tsv
+|   |   └── test.tsv
+|   └── paws_wiki
+|       ├── train.tsv
+|       ├── dev.tsv
+|       └── test.tsv
+└── fever
+    ├── fever.train.jsonl
+    ├── fever.dev.jsonl
+    ├── sym1
+    |   └── test.jsonl
+    └── sym2
+        ├── dev.jsonl
+        └── test.jsonl
+
+```
 
 By specifying the argument `--model_name_or_path` as `bert-base-uncased`, `bert-large-uncased` or `roberta-base`, the code will automatically download the PLMs. You can also manually download the models from [huggingface models](https://huggingface.co/models) and set `--model_name_or_path` as the path to the model checkpoints.
 
