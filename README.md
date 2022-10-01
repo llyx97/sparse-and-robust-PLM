@@ -58,7 +58,7 @@ By specifying the argument `--model_name_or_path` as `bert-base-uncased`, `bert-
 
 ## Fine-tuning Full BERT
 
-### Fine-tuning with Standard Cross-Entropy (CE) Loss
+### <span id="std_full_ft"> Fine-tuning with Standard Cross-Entropy (CE) Loss </span>
 To fine-tune full BERT with standard cross-entropy loss, use the scripts in `scripts/full_bert/std_train`. Taking MNLI as an example, run
 ```
   bash scripts/full_bert/std_train/mnli.sh
@@ -159,4 +159,10 @@ We utilize the OOD training data to explore the upper bound of SRNets. The above
 
 ## Refining the SRNets Searching Process
 ### The Timing to Start Searching SRNets
+To start mask training from a [standard full BERT](#std_full_ft) fine-tuned for 5000 steps, run
+```
+  bash scripts/mask_train/mask_on_plm_ft/plm_std_ft/poe/mnli/mask_on_checkpoints/5000.sh
+```
+The subnetwork sparsity is set to 70% by default.
+
 ### Gradual Sparsity Increase
