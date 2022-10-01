@@ -1,5 +1,5 @@
 export TASK_NAME=QQP
-export ROOT_DIR=/apdcephfs/share_47076/tmpv_xiuliu
+export ROOT_DIR=$HOME/sparse-and-robust-PLM
 export num_epoch=3
 export model_dir=$ROOT_DIR/robust_compression/log/full_bert/$TASK_NAME/epoch${num_epoch}_warmup
 

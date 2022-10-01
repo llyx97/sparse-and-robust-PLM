@@ -1,5 +1,5 @@
 export TASK_NAME=QQP
-export ROOT_DIR=$HOME/srnet
+export ROOT_DIR=$HOME/sparse-and-robust-PLM
 export num_epoch=3
 export lr=2e-5
 export warmup_steps=3400

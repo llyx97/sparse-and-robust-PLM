@@ -1,5 +1,5 @@
 export TASK_NAME=MNLI
-export ROOT_DIR=$HOME/srnet
+export ROOT_DIR=$HOME/sparse-and-robust-PLM
 export num_epoch=5
 export lr=5e-5
 export warmup_steps=3600
