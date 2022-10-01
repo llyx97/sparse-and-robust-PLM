@@ -163,6 +163,6 @@ To start mask training from a [standard full BERT](#std_full_ft) fine-tuned for 
 ```
   bash scripts/mask_train/mask_on_plm_ft/plm_std_ft/poe/mnli/mask_on_checkpoints/5000.sh
 ```
-The subnetwork sparsity is set to 70% by default.
+The sparsity of subnetworks are set to 70% by default.
 
 ### Gradual Sparsity Increase
