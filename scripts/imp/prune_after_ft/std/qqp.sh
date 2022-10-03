@@ -1,8 +1,8 @@
 export TASK_NAME=QQP
-export ROOT_DIR=$HOME/srnet
+export ROOT_DIR=$HOME/sparse-and-robust-PLM
 export num_epoch=7
 export lr=2e-5
-export output_dir=$ROOT_DIR/log/imp/prune_after_ft/$TASK_NAME
+export output_dir=$ROOT_DIR/log/imp/prune_after_ft/std/$TASK_NAME
 export bert_pt_dir=$ROOT_DIR/log/full_bert/$TASK_NAME/epoch3_lr2e-5
 export tokenizer_name=bert-base-uncased
 

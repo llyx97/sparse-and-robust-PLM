@@ -1,8 +1,8 @@
 export TASK_NAME=MNLI
-export ROOT_DIR=$HOME/srnet
+export ROOT_DIR=$HOME/sparse-and-robust-PLM
 export num_epoch=5
 export lr=5e-5
-export output_dir=$ROOT_DIR/log/imp/prune_after_ft/$TASK_NAME
+export output_dir=$ROOT_DIR/log/imp/prune_after_ft/std/$TASK_NAME
 export bert_pt_dir=$ROOT_DIR/log/full_bert/$TASK_NAME/epoch3_lr5e-5
 export tokenizer_name=bert-base-uncased
 

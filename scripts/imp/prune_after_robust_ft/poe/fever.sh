@@ -2,9 +2,11 @@ export TASK_NAME=fever
 export ROOT_DIR=$HOME/sparse-and-robust-PLM
 export num_epoch=7
 export lr=2e-5
-export output_dir=$ROOT_DIR/log/imp/prune_after_ft/std/$TASK_NAME
-export bert_pt_dir=$ROOT_DIR/log/full_bert/$TASK_NAME/epoch3_lr2e-5
+export robust_type=poe
+export output_dir=$ROOT_DIR/log/imp/prune_after_robust_ft/$robust_type/$TASK_NAME
+export bert_pt_dir=$ROOT_DIR/log/full_bert/$TASK_NAME/robust_train/$robust_type
 export tokenizer_name=bert-base-uncased
+export bias_dir=$ROOT_DIR/bias_model_preds/$TASK_NAME/log_probs.npy
 
 for seed in 1
 do
@@ -12,7 +14,9 @@ do
 	  --model_type bert \
 	  --model_name_or_path $bert_pt_dir/$seed \
 	  --tokenizer_name $tokenizer_name \
+	  --bias_dir $bias_dir \
 	  --task_name $TASK_NAME \
+	  --robust_training $robust_type \
 	  --do_train \
 	  --do_eval \
 	  --evaluate_during_training \
