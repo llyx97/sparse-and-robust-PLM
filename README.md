@@ -67,7 +67,9 @@ To fine-tune full BERT with standard cross-entropy loss, use the scripts in `scr
 ```
 
 ### Fine-tuning with Debiasing Loss
-The debiasing methods requires bias models' predictions, which are placed in the folder `bias_model_preds`. To fine-tune full BERT with *Product-of-Experts(PoE)* on MNLI, run
+The debiasing methods requires the bias models, which are trained using the codes provided by [chrisc36/debias](https://github.com/chrisc36/debias). The predictions of the bias models are placed in the folder `bias_model_preds`. 
+
+To fine-tune full BERT with *Product-of-Experts(PoE)* on MNLI, run
 ```
   bash scripts/full_bert/robust_train/poe/mnli.sh
 ```
