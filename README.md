@@ -2,6 +2,8 @@
 
 This repository contains implementation of the [paper](https://arxiv.org/abs/2204.11218) "A Win-win Deal: Towards Sparse and Robust Pre-trained Language Models" (accepted by NeruIPS 2022).
 
+The codes for debiasing methods are modified from [chrisc36/debias](https://github.com/chrisc36/debias) and [UKPLab/emnlp2020-debiasing-unknown](https://github.com/UKPLab/emnlp2020-debiasing-unknown). The codes for mask training are modified from [maskbert](https://github.com/ptlmasking/maskbert).
+
 ## Overview
 The main topic of this paper is to investigate **whether there exist PLM subnetworks that are both sparse and robust against dataset bias?**
 
