@@ -6,9 +6,9 @@ The codes for debiasing methods are modified from [chrisc36/debias](https://gith
 
 
 ## <span id="head-content"> Content </span>
-* - [1. Overview](#overview)
+* [1. Overview](#overview)
 
-* - [x] [2. Setup](#setup)
+* [2. Setup](#setup)
   
 * - [x] [3. Prepare Data and Pre-trained Language Models](#prepare) 
 * - [x] [Fine-tuning Full BERT](#fine-tune-full)  
