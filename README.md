@@ -15,9 +15,16 @@ The codes for debiasing methods are modified from [chrisc36/debias](https://gith
   * [Fine-tuning with Standard Cross-Entropy (CE) Loss](#std_full_ft)
   * [Fine-tuning with Debiasing Loss](#debias_full_ft)
 * [Subnetworks from Fine-tuned BERT](#prune_after_ft)
+  * [Subnetworks from Standard Fine-tuned BERT](#prune_after_std_ft)
+  * [Subnetworks from PoE Fine-tuned BERT](#prune_after_poe_ft)
 * [BERT Subnetworks Fine-tuned in Isolation](#prune_before_ft)
+  * [IMP](#prune_before_ft_imp)
+  * [Mask Training](#prune_before_ft_mask)
 * [BERT Subnetworks Without Fine-tuning](#wo_ft)
 * [Sparse and Unbiased BERT Subnetworks](#SUNets)
+  * [Subnetworks from Fine-tuned BERT](#SUNets_after_ft)
+  * [BERT Subnetworks Fine-tuned in Isolation](#SUNets_before_ft)
+  * [BERT Subnetworks Without Fine-tuning](#SUNets_wo_ft)
 * [Refining the SRNets Searching Process](#refine-searching)
   * [The Timing to Start Searching SRNets](#pruning-timing)
   * [Gradual Sparsity Increase](#gradual-sparsity-increase)
@@ -98,7 +105,7 @@ Note that to perform `conf_reg`, we need to first fine-tune BERT with standard C
 
 ## <span id="prune_after_ft"> Subnetworks from Fine-tuned BERT </span>
 
-### Subnetworks from Standard Fine-tuned BERT
+### <span id="prune_after_std_ft"> Subnetworks from Standard Fine-tuned BERT </span>
 #### IMP
 To perform IMP using the CE loss on a standard fine-tuned BERT (again, taking MNLI as example), run
 ```
@@ -121,7 +128,7 @@ Similarly, to use the PoE loss, run
   bash scripts/mask_train/mask_on_plm_ft/plm_std_ft/poe/mnli/0.5.sh
 ```
 
-### Subnetworks from PoE Fine-tuned BERT
+### <span id="prune_after_poe_ft"> Subnetworks from PoE Fine-tuned BERT </span>
 #### IMP
 To perform IMP using the PoE loss on a PoE fine-tuned BERT, run
 ```
@@ -135,7 +142,7 @@ To perform mask training using the PoE loss, with a target sparsity of 50%, run
 ```
 
 ## <span id="prune_before_ft"> BERT Subnetworks Fine-tuned in Isolation </span>
-### IMP
+### <span id="prune_before_ft_imp"> IMP </span>
 To obtain the subnetworks using IMP, run
 ```
   bash scripts/imp/lt/pruning/mnli.sh
@@ -146,7 +153,7 @@ This will produce subnetworks with varying sparsity levels (10%~90%). Then, fine
 ```
 Change the shell script to `scripts/imp/lt/retrain/poe/mnli/0.5.sh` to enable PoE fine-tuning.
 
-### Mask Training
+### <span id="prune_before_ft_mask"> Mask Training </span>
 We use the pruning masks of the [Subnetworks from Standard Fine-tuned BERT](#mask_train1). Then, fine-tune the obtained subnetwork by running:
 ```
   bash scripts/mask_train/mask_on_plm_ft/plm_std_ft/poe/mnli/retrain/std/0.5.sh
@@ -165,15 +172,15 @@ To enable mask training with PoE, change the shell script to `scripts/mask_train
 ## <span id="SUNets"> Sparse and Unbiased BERT Subnetworks </span>
 We utilize the OOD training data to explore the upper bound of SRNets. The above three setups are considered and we give examples as follows
 
-**Subnetworks from Fine-tuned BERT**:
+<span id="SUNets_after_ft"> **Subnetworks from Fine-tuned BERT** </span>:
 ```
   bash scripts/mask_train/mask_on_plm_ft/plm_std_ft/ood/mnli/0.5.sh
 ```
-**BERT Subnetworks Fine-tuned in Isolation**:
+<span id="SUNets_before_ft"> **BERT Subnetworks Fine-tuned in Isolation** </span>:
 ```
   bash scripts/mask_train/mask_on_plm_ft/plm_std_ft/ood/mnli/retrain/0.5.sh
 ```
-**BERT Subnetworks Without Fine-tuning**:
+<span id="SUNets_wo_ft"> **BERT Subnetworks Without Fine-tuning** </span>:
 ```
   bash scripts/mask_train/mask_on_plm_pt/ood/mnli/0.5.sh
 ```
