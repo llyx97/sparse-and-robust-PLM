@@ -143,7 +143,7 @@ To perform mask training using the PoE loss, with a target sparsity of 50%, run
 
 ## <span id="prune_before_ft"> BERT Subnetworks Fine-tuned in Isolation </span>
 ### <span id="prune_before_ft_imp"> IMP </span>
-To obtain the subnetworks using IMP, run
+To obtain the subnetworks using IMP and PoE objective, run
 ```
   bash scripts/imp/lt/pruning/mnli.sh
 ```
