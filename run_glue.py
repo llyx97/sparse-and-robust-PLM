@@ -669,7 +669,7 @@ def main():
                 logger.info("  %s = %s", key, value)
                 writer.write("%s = %s\n" % (key, value))
 
-    if training_args.bias_dir is None and training_args.teacher_prob_dir is None:
+    if training_args.bias_dir is None and training_args.teacher_prob_dir is None and not model_args.is_imp:
         logger.info("*** Compute the predicted logits of the training set ***")
         train_dataset = GlueDataset(data_args, tokenizer=tokenizer, mode='train')
         eval_dataloader = trainer.get_eval_dataloader(train_dataset)
