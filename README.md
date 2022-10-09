@@ -123,10 +123,7 @@ To perform mask training using the CE loss, with a target sparsity of 50%, run
 ```
   bash scripts/mask_train/mask_on_plm_ft/plm_std_ft/std/mnli/0.5.sh
 ```
-Similarly, to use the PoE loss, run
-```
-  bash scripts/mask_train/mask_on_plm_ft/plm_std_ft/poe/mnli/0.5.sh
-```
+Similarly, changing `std` in the path to `poe`, `reweighting` or `conf_reg` to use the dibiasing methods.
 
 ### <span id="prune_after_poe_ft"> Subnetworks from PoE Fine-tuned BERT </span>
 #### IMP
