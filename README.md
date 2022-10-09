@@ -14,6 +14,13 @@ The codes for debiasing methods are modified from [chrisc36/debias](https://gith
 * [Fine-tuning Full BERT](#fine-tune-full)  
   * [Fine-tuning with Standard Cross-Entropy (CE) Loss](#std_full_ft)
   * [Fine-tuning with Debiasing Loss](#debias_full_ft)
+* [Subnetworks from Fine-tuned BERT](#prune_after_ft)
+* [BERT Subnetworks Fine-tuned in Isolation](#prune_before_ft)
+* [BERT Subnetworks Without Fine-tuning](#wo_ft)
+* [Sparse and Unbiased BERT Subnetworks](#SUNets)
+* [Refining the SRNets Searching Process](#refine-searching)
+  * [The Timing to Start Searching SRNets](#pruning-timing)
+  * [Gradual Sparsity Increase](#gradual-sparsity-increase)
 
 ## <span id="overview"> Overview </span>
 The main topic of this paper is to investigate **whether there exist PLM subnetworks that are both sparse and robust against dataset bias?**
@@ -89,7 +96,7 @@ Changing `poe` to `reweighting` or `conf_reg` to switch to *Example Reweighting*
 Note that to perform `conf_reg`, we need to first fine-tune BERT with standard CE loss (the teacher model) and obtain the predictions.
 
 
-## Subnetworks from Fine-tuned BERT
+## <span id="prune_after_ft"> Subnetworks from Fine-tuned BERT </span>
 
 ### Subnetworks from Standard Fine-tuned BERT
 #### IMP
@@ -127,7 +134,7 @@ To perform mask training using the PoE loss, with a target sparsity of 50%, run
   bash scripts/mask_train/mask_on_plm_ft/plm_poe_ft/poe/mnli/0.5.sh
 ```
 
-## BERT Subnetworks Fine-tuned in Isolation
+## <span id="prune_before_ft"> BERT Subnetworks Fine-tuned in Isolation </span>
 ### IMP
 To obtain the subnetworks using IMP, run
 ```
@@ -147,7 +154,7 @@ We use the pruning masks of the [Subnetworks from Standard Fine-tuned BERT](#mas
 Change the shell script to `scripts/mask_train/mask_on_plm_ft/plm_std_ft/poe/mnli/retrain/poe/0.5.sh` to enable PoE fine-tuning.
 
 
-## BERT Subnetworks Without Fine-tuning
+## <span id="wo_ft"> BERT Subnetworks Without Fine-tuning </span>
 To obtain the subnetworks, directly performing mask training on the pre-trained BERT:
 ```
   bash scripts/mask_train/mask_on_plm_pt/std/mnli/0.5.sh
@@ -155,7 +162,7 @@ To obtain the subnetworks, directly performing mask training on the pre-trained 
 To enable mask training with PoE, change the shell script to `scripts/mask_train/mask_on_plm_pt/poe/mnli/0.5.sh`.
 
 
-## Sparse and Unbiased BERT Subnetworks
+## <span id="SUNets"> Sparse and Unbiased BERT Subnetworks </span>
 We utilize the OOD training data to explore the upper bound of SRNets. The above three setups are considered and we give examples as follows
 
 **Subnetworks from Fine-tuned BERT**:
@@ -171,15 +178,15 @@ We utilize the OOD training data to explore the upper bound of SRNets. The above
   bash scripts/mask_train/mask_on_plm_pt/ood/mnli/0.5.sh
 ```
 
-## Refining the SRNets Searching Process
-### The Timing to Start Searching SRNets
+## <span id="refine-searching"> Refining the SRNets Searching Process </span>
+### <span id="pruning-timing"> The Timing to Start Searching SRNets </span>
 To start mask training from a [standard full BERT](#std_full_ft) fine-tuned for 5000 steps, run
 ```
   bash scripts/mask_train/mask_on_plm_ft/plm_std_ft/poe/mnli/mask_on_checkpoints/5000.sh
 ```
 The sparsity of subnetworks are set to 70% by default.
 
-### Gradual Sparsity Increase
+### <span id="gradual-sparsity-increase"> Gradual Sparsity Increase </span>
 To perform mask training with gradual sparsity increase, run the following command:
 ```
   bash scripts/mask_train/mask_on_plm_ft/plm_std_ft/poe/mnli/gradual_sparsity_increase/0.9.sh
