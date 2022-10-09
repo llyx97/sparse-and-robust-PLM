@@ -6,12 +6,12 @@ The codes for debiasing methods are modified from [chrisc36/debias](https://gith
 
 
 ## <span id="head-content"> Content </span>
-* [1. Overview](#overview)
+* [Overview](#overview)
 
-* [2. Setup](#setup)
+* [Setup](#setup)
   
-* - [x] [3. Prepare Data and Pre-trained Language Models](#prepare) 
-* - [x] [Fine-tuning Full BERT](#fine-tune-full)  
+* [Prepare Data and Pre-trained Language Models](#prepare) 
+* [Fine-tuning Full BERT](#fine-tune-full)  
   * [Fine-tuning with Standard Cross-Entropy (CE) Loss](#std_full_ft)
   * [Fine-tuning with Debiasing Loss](#debias_full_ft)
 
