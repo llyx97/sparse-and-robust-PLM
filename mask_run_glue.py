@@ -68,34 +68,6 @@ def str2bool(v):
 
 
 
-def summarize_results(task, output_dir):
-    lines = """import re, os
-import numpy as np
-
-task = '%s'"""%task.lower() + """
-seeds = [i for i in range(1, 4)]
-pattern = re.compile(r'-?\d+\.?\d*e?-?\d*?')
-
-scores = []
-for seed in seeds:
-        filename = os.path.join(str(seed), 'eval_results_%s.txt'%task)
-        file = open(filename, 'r')
-        lines = file.readlines()
-        s = float(pattern.findall(lines[-1])[0])
-        print('%d: %.3f'%(seed, s))
-        scores.append(s)
-        file.close()
-score = np.mean(scores)
-std = np.std(scores)
-print('Avg score: %.3f'%(score))
-print('Std: %.3f'%(std))
-    """
-    if not os.path.exists(output_dir[:-2]+'/summarize_results.py'):
-        file = open(os.path.join(output_dir[:-2], 'summarize_results.py'), 'w')
-        file.write(lines)
-        file.close()
-
-
 def see_weight_rate(model, model_type):
     sum_list = 0
     zero_sum = 0
@@ -615,7 +587,6 @@ def main():
     if training_args.do_eval and training_args.local_rank in [-1, 0]:
         logger.info("*** Evaluate ***")
 
-        #summarize_results(data_args.task_name, training_args.output_dir)
         if training_args.do_train or model_args.load_mask_from is not None:
             logger.info("*** Loading best checkpoint ***")
             model, config = load_model()
