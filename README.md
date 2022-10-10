@@ -195,4 +195,4 @@ To perform mask training with gradual sparsity increase, run the following comma
 ```
   bash scripts/mask_train/mask_on_plm_ft/plm_std_ft/poe/mnli/gradual_sparsity_increase/0.9.sh
 ```
-The initial and final sparsity levels can be set in the script, corresponding to the arguments `--init_sparsity` and `--zero_rate`, respectively.
+The initial and final sparsity levels can be set in the script, corresponding to the arguments `--init_sparsity` and `--zero_rate`, respectively. Note that we adopt the soft version of magnitude initialization when using gradual sparsity increase (by setting `--controlled_init` as `magnitude_soft`)
