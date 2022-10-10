@@ -39,6 +39,7 @@ do
 	  --save_steps 0 \
 	  --zero_rate $zero_rate \
 	  --controlled_init magnitude \
+	  --global_grad_clip false \
 	  --train_classifier $train_classifier \
 	  --mask_classifier $mask_classifier \
 	  --global_prune $global_prune \

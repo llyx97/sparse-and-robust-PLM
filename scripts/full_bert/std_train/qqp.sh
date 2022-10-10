@@ -24,6 +24,7 @@ do
 	  --num_train_epochs $num_epoch \
 	  --output_dir $output_dir/$seed \
 	  --logging_dir $output_dir/$seed/logging \
+	  --global_grad_clip false \
 	  --root_dir $ROOT_DIR \
 	  --logging_steps 1000 \
 	  --save_steps 0 \

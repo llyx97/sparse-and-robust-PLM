@@ -38,6 +38,7 @@ do
 	  --controlled_init magnitude \
 	  --train_classifier false \
 	  --mask_classifier true \
+	  --global_grad_clip false \
 	  --global_prune $global_prune \
 	  --best_metric $best_metric \
 	  --seed $seed
