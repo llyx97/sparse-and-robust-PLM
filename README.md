@@ -6,26 +6,26 @@ The codes for debiasing methods are modified from [chrisc36/debias](https://gith
 
 
 ## <span id="head-content"> Content </span>
-* [Overview](#overview)
+* [1.Overview](#overview)
 
-* [Setup](#setup)
+* [2.Setup](#setup)
   
-* [Prepare Data and Pre-trained Language Models](#prepare) 
-* [Fine-tuning Full BERT](#fine-tune-full)  
+* [3.Prepare Data and Pre-trained Language Models](#prepare) 
+* [4.Fine-tuning Full BERT](#fine-tune-full)  
   * [Fine-tuning with Standard Cross-Entropy (CE) Loss](#std_full_ft)
   * [Fine-tuning with Debiasing Loss](#debias_full_ft)
-* [Subnetworks from Fine-tuned BERT](#prune_after_ft)
+* [5.Subnetworks from Fine-tuned BERT](#prune_after_ft)
   * [Subnetworks from Standard Fine-tuned BERT](#prune_after_std_ft)
   * [Subnetworks from PoE Fine-tuned BERT](#prune_after_poe_ft)
-* [BERT Subnetworks Fine-tuned in Isolation](#prune_before_ft)
+* [6.BERT Subnetworks Fine-tuned in Isolation](#prune_before_ft)
   * [IMP](#prune_before_ft_imp)
   * [Mask Training](#prune_before_ft_mask)
-* [BERT Subnetworks Without Fine-tuning](#wo_ft)
-* [Sparse and Unbiased BERT Subnetworks](#SUNets)
+* [7.BERT Subnetworks Without Fine-tuning](#wo_ft)
+* [8.Sparse and Unbiased BERT Subnetworks](#SUNets)
   * [Subnetworks from Fine-tuned BERT](#SUNets_after_ft)
   * [BERT Subnetworks Fine-tuned in Isolation](#SUNets_before_ft)
   * [BERT Subnetworks Without Fine-tuning](#SUNets_wo_ft)
-* [Refining the SRNets Searching Process](#refine-searching)
+* [9.Refining the SRNets Searching Process](#refine-searching)
   * [The Timing to Start Searching SRNets](#pruning-timing)
   * [Gradual Sparsity Increase](#gradual-sparsity-increase)
 
