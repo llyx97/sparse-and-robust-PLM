@@ -8,7 +8,7 @@ export global_prune=false
 export dataset_names=qqp
 export best_metric=eval_f1
 export robust_type=poe
-export output_dir=$ROOT_DIR/log/mask_train/prune_after_ft/$robust_type/$TASK_NAME/$zero_rate
+export output_dir=$ROOT_DIR/log/mask_train/mask_on_plm_std_ft/$robust_type/$TASK_NAME/$zero_rate
 export model_dir=$ROOT_DIR/log/full_bert/$TASK_NAME/epoch3_lr2e-5
 export bias_dir=$ROOT_DIR/bias_model_preds/$TASK_NAME/log_probs.pkl
 

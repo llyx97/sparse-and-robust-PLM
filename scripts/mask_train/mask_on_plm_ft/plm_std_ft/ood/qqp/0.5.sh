@@ -8,7 +8,7 @@ export warmup_steps=0
 export global_prune=false
 export dataset_names=qqp,paws_qqp,paws_wiki
 export best_metric=eval_f1
-export output_dir=$ROOT_DIR/log/mask_train/prune_after_ft/train_w_ood/$TASK_NAME/$zero_rate
+export output_dir=$ROOT_DIR/log/mask_train/mask_on_plm_std_ft/train_w_ood/$TASK_NAME/$zero_rate
 export model_dir=$ROOT_DIR/log/full_bert/$TASK_NAME/epoch3_lr2e-5
 
 for seed in 1

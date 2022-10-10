@@ -5,8 +5,8 @@ export zero_rate=0.7
 export logging_steps=1000
 export warmup_steps=3600
 export best_metric=eval_acc
-export mask_dir=$ROOT_DIR/log/mask_train/prune_after_ft/train_w_ood/$TASK_NAME/$zero_rate
-export output_dir=$ROOT_DIR/log/mask_train/prune_after_ft/train_w_ood/$TASK_NAME/retrain/$zero_rate
+export mask_dir=$ROOT_DIR/log/mask_train/mask_on_plm_std_ft/train_w_ood/$TASK_NAME/$zero_rate
+export output_dir=$ROOT_DIR/log/mask_train/mask_on_plm_std_ft/train_w_ood/$TASK_NAME/retrain/$zero_rate
 export model_dir=bert-base-uncased
 
 for seed in 1

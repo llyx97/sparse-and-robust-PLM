@@ -10,7 +10,7 @@ export dataset_names=fever,sym2
 export set_types=train,dev
 export duplicates=1,10
 export best_metric=eval_acc
-export output_dir=$ROOT_DIR/log/mask_train/prune_after_ft/train_w_ood/$TASK_NAME/$zero_rate
+export output_dir=$ROOT_DIR/log/mask_train/mask_on_plm_std_ft/train_w_ood/$TASK_NAME/$zero_rate
 export model_dir=$ROOT_DIR/log/full_bert/$TASK_NAME/epoch3_lr2e-5
 
 for seed in 1

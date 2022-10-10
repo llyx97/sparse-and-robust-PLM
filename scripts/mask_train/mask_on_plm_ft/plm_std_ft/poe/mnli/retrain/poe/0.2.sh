@@ -6,8 +6,8 @@ export logging_steps=1000
 export warmup_steps=3600
 export robust_type=poe
 export best_metric=eval_acc
-export mask_dir=$ROOT_DIR/log/mask_train/prune_after_ft/$robust_type/$TASK_NAME/$zero_rate
-export output_dir=$ROOT_DIR/log/mask_train/prune_after_ft/$robust_type/$TASK_NAME/retrain/$robust_type/$zero_rate
+export mask_dir=$ROOT_DIR/log/mask_train/mask_on_plm_std_ft/$robust_type/$TASK_NAME/$zero_rate
+export output_dir=$ROOT_DIR/log/mask_train/mask_on_plm_std_ft/$robust_type/$TASK_NAME/retrain/$robust_type/$zero_rate
 export model_dir=bert-base-uncased
 export bias_dir=$ROOT_DIR/bias_model_preds/$TASK_NAME/log_probs.npy
 

@@ -6,8 +6,8 @@ export logging_steps=1000
 export warmup_steps=3600
 export robust_type=std
 export best_metric=eval_acc
-export mask_dir=$ROOT_DIR/log/mask_train/prune_after_ft/poe/$TASK_NAME/$zero_rate
-export output_dir=$ROOT_DIR/log/mask_train/prune_after_ft/poe/$TASK_NAME/retrain/$robust_type/$zero_rate
+export mask_dir=$ROOT_DIR/log/mask_train/mask_on_plm_std_ft/poe/$TASK_NAME/$zero_rate
+export output_dir=$ROOT_DIR/log/mask_train/mask_on_plm_std_ft/poe/$TASK_NAME/retrain/$robust_type/$zero_rate
 export model_dir=bert-base-uncased
 
 for seed in 1

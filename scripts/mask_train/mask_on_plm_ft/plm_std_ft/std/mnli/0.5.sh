@@ -7,7 +7,7 @@ export warmup_steps=3600
 export global_prune=false
 export dataset_names=mnli
 export best_metric=eval_acc
-export output_dir=$ROOT_DIR/log/mask_train/prune_after_ft/std/$TASK_NAME/$zero_rate
+export output_dir=$ROOT_DIR/log/mask_train/mask_on_plm_std_ft/std/$TASK_NAME/$zero_rate
 export model_dir=$ROOT_DIR/log/full_bert/$TASK_NAME/epoch3_lr5e-5
 
 for seed in 1
