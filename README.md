@@ -206,7 +206,7 @@ The initial and final sparsity levels can be set in the script, corresponding to
 
 If you use this repository in a published research, please cite our paper:
 ```bibtex
-@misc{Liu2022SRNets,
+@article{Liu2022SRNets,
 author = {Yuanxin Liu, Fandong Meng, Zheng Lin, Jiangnan Li, Peng Fu, Yanan Cao, Weiping Wang, Jie Zhou},
 title = {A Win-win Deal: Towards Sparse and Robust Pre-trained Language Models},
 year = {2022},
