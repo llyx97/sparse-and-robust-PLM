@@ -5,5 +5,5 @@ tqdm
 jsonlines
 packaging
 sklearn
-transformers==2.10.0
+transformers>=2.10.0
 tensorboardX
